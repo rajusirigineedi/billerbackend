@@ -95,6 +95,7 @@ exports.restrictTo = (...roles) => {
   };
 };
 
+// A registered user can be an Admin or a Staff member
 exports.signup = catchAsync(async (req, res, next) => {
     const newUser = await User.create({
       name: req.body.name,
